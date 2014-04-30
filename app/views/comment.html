@@ -7,23 +7,35 @@
 </header>
 <div class="main">
 	<div class="comment">
-		<div class="comment-item" ng-repeat="comment in data">
-			<div class="comment-item-info row">
-				<div class="comment-item-user col-6 row">
-					<div class="col-2">
-						<img ng-src="{{comment.user.img}}" alt="" width="18px" height="18px">
+		<div class="comment-list">
+			<div class="comment-item" ng-repeat="comment in data">
+				<div class="comment-item-info row">
+					<div class="comment-item-user col-6 row">
+						<div class="col-2">
+							<img ng-src="{{comment.user.img}}" alt="" width="18px" height="18px">
+						</div>
+						<div class="col-10">{{comment.user.desc}}</div>
 					</div>
-					<div class="col-10">{{comment.user.desc}}</div>
+					<div class="comment-item-time col-6">
+						{{comment.time}}
+					</div>
 				</div>
-				<div class="comment-item-time col-6">
-					{{comment.time}}
+				<div class="commit-item-content">
+					{{comment.content}}
+				</div>
+				<div class="comment-item-footer">
+					<span class="icon-thumbs-up"></span>{{comment.good}}
 				</div>
 			</div>
-			<div class="commit-item-content">
-				{{comment.content}}
+		</div>
+		<div class="comment-publish">
+			<div class="comment-publish-title">评论这篇文章</div>
+			<div class="comment-publish-content">
+				<textarea></textarea>
 			</div>
-			<div class="comment-item-footer">
-				<span class="icon-thumbs-up"></span>{{comment.good}}
+			<div class="comment-publish-btn">
+				<button>发布</button>
+				<button ng-click="cancel()">取消</button>
 			</div>
 		</div>
 	</div>
@@ -33,7 +45,7 @@
 		<div class="col-2" ng-click="back()">
 			<span class="icon-arrow-left10"></span>
 		</div>
-		<div class="col-10">
+		<div class="col-10" ng-click="write()">
 			<span class="icon-compose"></span>写点评
 		</div>
 	</div>

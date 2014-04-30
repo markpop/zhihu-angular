@@ -6,6 +6,12 @@ angular.module('zhihuAngularApp')
     $scope.back = function () {
     	$location.path('article/'+id);
     };
+    $scope.write = function () {
+    	$('.comment-publish').addClass('open');
+    };
+    $scope.cancel = function () {
+    	$('.comment-publish').removeClass('open');
+    };
     Api.get('scripts/data/comment.json').then(function (data) {
     	$scope.data = data;
     });
