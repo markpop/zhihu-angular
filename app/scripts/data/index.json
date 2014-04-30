@@ -1,0 +1,43 @@
+{
+	"code": 200,
+	"data": {
+		"sliders": [
+			{
+				"img": "images/slider.jpg"
+			},
+			{
+				"img": "images/slider.jpg"
+			},
+			{
+				"img": "images/slider.jpg"
+			}
+		],
+		"articles": [
+			{
+				"id": 0,
+				"title": "舌尖上的中国里面的豆花和豆副闹是不是一种东西",
+				"img": "images/slider.jpg"
+			},
+			{
+				"id": 1,
+				"title": "舌尖上的中国里面的豆花和豆副闹是不是一种东西",
+				"img": "images/slider.jpg"
+			},
+			{
+				"id": 2,
+				"title": "舌尖上的中国里面的豆花和豆副闹是不是一种东西",
+				"img": "images/slider.jpg"
+			},
+			{
+				"id": 3,
+				"title": "舌尖上的中国里面的豆花和豆副闹是不是一种东西",
+				"img": "images/slider.jpg"
+			},
+			{
+				"id": 4,
+				"title": "舌尖上的中国里面的豆花和豆副闹是不是一种东西",
+				"img": "images/slider.jpg"
+			}
+		]
+	}
+}

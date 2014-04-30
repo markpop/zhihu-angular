@@ -1,0 +1,34 @@
+<div class="cover none" ng-click="menuClose()"></div>
+<header>
+	<div class="topnav row">
+		<div class="col-2" ng-click="menuOpen()">
+			<span class="icon-list5"></span>
+		</div>
+		<div class="col-8">
+			今日新闻
+		</div>
+		<div class="col-2">
+			
+		</div>
+	</div>
+</header>
+<div class="main">
+	<div class="swipe" id="slider">
+		<div class="swipe-wrapper">
+			<div ng-repeat="slider in data.sliders" on-finish-render>
+				<img ng-src="{{slider.img}}" alt="" width="100%">
+			</div>
+		</div>
+		<div class="nav-bullets"></div>
+	</div>
+	<div class="list">
+		<div class="list-item row" ng-repeat="article in data.articles" ng-click="goArticle(article.id)">
+			<div class="list-item-content col-9">
+				{{article.title}}
+			</div>
+			<div class="list-item-img col-3">
+				<img ng-src="{{article.img}}" alt="" width="100%">
+			</div>
+		</div>
+	</div>
+</div>

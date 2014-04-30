@@ -1,0 +1,40 @@
+<header>
+	<div class="topnav row">
+		<div class="col-12">
+			1条点评
+		</div>
+	</div>
+</header>
+<div class="main">
+	<div class="comment">
+		<div class="comment-item" ng-repeat="comment in data">
+			<div class="comment-item-info row">
+				<div class="comment-item-user col-6 row">
+					<div class="col-2">
+						<img ng-src="{{comment.user.img}}" alt="" width="18px" height="18px">
+					</div>
+					<div class="col-10">{{comment.user.desc}}</div>
+				</div>
+				<div class="comment-item-time col-6">
+					{{comment.time}}
+				</div>
+			</div>
+			<div class="commit-item-content">
+				{{comment.content}}
+			</div>
+			<div class="comment-item-footer">
+				<span class="icon-thumbs-up"></span>{{comment.good}}
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="comment-footer row">
+		<div class="col-2" ng-click="back()">
+			<span class="icon-arrow-left10"></span>
+		</div>
+		<div class="col-10">
+			<span class="icon-compose"></span>写点评
+		</div>
+	</div>
+</footer>

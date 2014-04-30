@@ -1,0 +1,105 @@
+<header>
+	<div class="article-header">
+		<img ng-src="{{data.img}}" alt="" width="100%">
+		<div class="article-header-title">
+			{{data.title}}
+		</div>
+	</div>
+</header>
+<div class="main">
+	<div class="article">
+		<div class="article-author row">
+			<div class="article-author-img col-1">
+				<img ng-src="{{data.user.img}}" alt="" width="18px" height="18px">
+			</div>
+			<div class="article-author-desc col-11">
+				<span class="ml5">{{data.user.desc}}</span>
+			</div>
+		</div>
+		<div class="article-content" ng-bind-html="data.content"></div>
+		<div class="article-link">
+			<button>查看知乎讨论</button>
+		</div>
+	</div>
+	<div class="article-share">
+		<div class="article-share-title">分享这篇内容</div>
+		<div class="article-share-content row">
+			<div class="col-3 mt10">
+				<div class="article-share-icon green">
+					<span class="icon-bubbles"></span>
+				</div>
+				<div class="article-share-name mt5">
+					微信
+				</div>
+			</div>
+			<div class="col-3 mt10">
+				<div class="article-share-icon blue">
+					<span class="icon-qq"></span>
+				</div>
+				<div class="article-share-name mt5">
+					QQ
+				</div>
+			</div>
+			<div class="col-3 mt10">
+				<div class="article-share-icon red">
+					<span class="icon-sina-weibo"></span>
+				</div>
+				<div class="article-share-name mt5">
+					新浪微博
+				</div>
+			</div>
+			<div class="col-3 mt10">
+				<div class="article-share-icon pink">
+					<span class="icon-text"></span>
+				</div>
+				<div class="article-share-name mt5">
+					复制链接
+				</div>
+			</div>
+			<div class="col-3 mt10">
+				<div class="article-share-icon deep">
+					<span class="icon-bubble"></span>
+				</div>
+				<div class="article-share-name mt5">
+					信息
+				</div>
+			</div>
+			<div class="col-3 mt10">
+				<div class="article-share-icon light">
+					<span class="icon-mail5"></span>
+				</div>
+				<div class="article-share-name mt5">
+					电子邮件
+				</div>
+			</div>
+			<div class="col-3 mt10">
+				<div class="article-share-icon green">
+					<span class="icon-evernote"></span>
+				</div>
+				<div class="article-share-name mt5">
+					印象笔记
+				</div>
+			</div>
+		</div>
+		<div class="article-share-btn">
+			<button>收藏</button>
+			<button class="article-share-cancel" ng-click="cancel()">取消</button>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="article-footer row">
+		<div class="col-3" ng-click="back()">
+			<span class="icon-arrow-left10"></span>
+		</div>
+		<div class="col-3">
+			<span class="icon-arrow-down10"></span>
+		</div>
+		<div class="col-3" ng-click="share()">
+			<span class="icon-export"></span>
+		</div>
+		<div class="col-3 bl" ng-click="comment()">
+			<span class="icon-comments mr5"></span>1点评
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,120 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="styles/fonts/icomoon/style.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="zhihuAngularApp" ng-controller="GlobalCtrl">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="container">
+      <div class="menu">
+        <div class="menu-wrapper">
+          <div class="menu-item" ng-class="{active: controller === 'IndexCtrl'}" ng-click="menuHome($event.target)">
+            <span class="icon-home pr10"></span>首页
+          </div>
+          <div class="menu-item">
+            <span class="icon-bubbles2 pr10"></span>聊天
+          </div>
+          <div class="menu-item">
+            <span class="icon-users pr10"></span>用户
+          </div>
+          <div class="menu-item">
+            <span class="icon-drawer3 pr10"></span>收藏
+          </div>
+          <div class="menu-item" ng-class="{active: controller === 'SettingCtrl'}" ng-click="menuSetting($event.target)">
+            <span class="icon-cogs pr10"></span>设置
+          </div>
+          <div class="menu-item row">
+            <div class="col-5">
+              <div class="menu-circle" ng-click="download()">
+                <div class="menu-circle-border">
+                  <span class="icon-download4 menu-dl"></span>
+                </div>
+                <div class="menu-circle-progress none">
+                  100%
+                </div>
+                <div class="menu-circle-message">
+                  离线
+                </div>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="menu-circle" ng-click="night()">
+                <div class="menu-circle-border">
+                  <span class="icon-moon2 menu-dn"></span>
+                </div>
+                <div class="menu-circle-message">
+                  夜间
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div ng-view=""></div>
+      </div>
+    </div>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/zepto-full/zepto.min.js"></script>
+    <script src="bower_components/swipe/swipe.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/global.js"></script>
+        <script src="scripts/controllers/index.js"></script>
+        <script src="scripts/controllers/article.js"></script>
+        <script src="scripts/controllers/setting.js"></script>
+        <script src="scripts/controllers/comment.js"></script>
+        <script src="scripts/services/tool.js"></script>
+        <script src="scripts/services/api.js"></script>
+        <script src="scripts/directives/onFinishRender.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
