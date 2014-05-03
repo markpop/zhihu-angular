@@ -32,7 +32,7 @@
           <div class="menu-item" ng-class="{active: controller === 'IndexCtrl'}" ng-click="menuHome($event.target)">
             <span class="icon-home pr10"></span>首页
           </div>
-          <div class="menu-item">
+          <div class="menu-item" ng-class="{active: controller === 'RoomCtrl'}" ng-click="menuRoom($event.target)">
             <span class="icon-bubbles2 pr10"></span>聊天
           </div>
           <div class="menu-item">
@@ -102,6 +102,8 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/zepto-full/zepto.min.js"></script>
     <script src="bower_components/swipe/swipe.js"></script>
+    <script src="bower_components/angular-socket-io/socket.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -112,8 +114,11 @@
         <script src="scripts/controllers/article.js"></script>
         <script src="scripts/controllers/setting.js"></script>
         <script src="scripts/controllers/comment.js"></script>
+        <script src="scripts/controllers/room.js"></script>
+        <script src="scripts/controllers/chat.js"></script>
         <script src="scripts/services/tool.js"></script>
         <script src="scripts/services/api.js"></script>
+        <script src="scripts/services/socket.js"></script>
         <script src="scripts/directives/onFinishRender.js"></script>
         <!-- endbuild -->
 </body>

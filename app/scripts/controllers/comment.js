@@ -12,6 +12,23 @@ angular.module('zhihuAngularApp')
     $scope.cancel = function () {
     	$('.comment-publish').removeClass('open');
     };
+    $scope.publish = function () {
+        Api.get('scripts/data/ok.json').then(function (data) {
+            var comment = {
+                id: data.id,
+                time: data.time,
+                content: $scope.content,
+                good: 0,
+                user: {
+                    img: "images/slider.jpg",
+                    desc: "猴子不郁闷"
+                }
+            };
+            $scope.data.push(comment);
+            $scope.content = '';
+            $scope.cancel();
+        });
+    };
     Api.get('scripts/data/comment.json').then(function (data) {
     	$scope.data = data;
     });

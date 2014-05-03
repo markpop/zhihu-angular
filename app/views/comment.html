@@ -1,7 +1,7 @@
 <header>
 	<div class="topnav row">
 		<div class="col-12">
-			1条点评
+			{{data.length}}条点评
 		</div>
 	</div>
 </header>
@@ -29,14 +29,16 @@
 			</div>
 		</div>
 		<div class="comment-publish">
-			<div class="comment-publish-title">评论这篇文章</div>
-			<div class="comment-publish-content">
-				<textarea></textarea>
-			</div>
-			<div class="comment-publish-btn">
-				<button>发布</button>
-				<button ng-click="cancel()">取消</button>
-			</div>
+			<form ng-submit="publish()" name="publishForm">
+				<div class="comment-publish-title">评论这篇文章</div>
+				<div class="comment-publish-content">
+					<textarea ng-model="content" required></textarea>
+				</div>
+				<div class="comment-publish-btn">
+					<button type="submit" ng-disabled="publishForm.$invalid">发布</button>
+					<button ng-click="cancel()">取消</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>

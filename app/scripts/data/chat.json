@@ -1,0 +1,47 @@
+{
+	"code": 200,
+	"data":[
+		{
+			"content": "你好吗",
+			"user": {
+				"id": 1,
+				"img": "images/slider.jpg"
+			} 
+		},
+		{
+			"content": "你好吗",
+			"user": {
+				"id": 0,
+				"img": "images/slider.jpg"
+			} 
+		},
+		{
+			"content": "你好吗",
+			"user": {
+				"id": 0,
+				"img": "images/slider.jpg"
+			} 
+		},
+		{
+			"content": "你好吗",
+			"user": {
+				"id": 0,
+				"img": "images/slider.jpg"
+			} 
+		},
+		{
+			"content": "你好吗",
+			"user": {
+				"id": 0,
+				"img": "images/slider.jpg"
+			} 
+		},
+		{
+			"content": "你好吗",
+			"user": {
+				"id": 1,
+				"img": "images/slider.jpg"
+			} 
+		}
+	]
+}

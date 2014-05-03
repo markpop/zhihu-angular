@@ -1,0 +1,53 @@
+<header>
+	<div class="topnav row">
+		<div class="col-2 lh150" ng-click="back()">
+			<span class="icon-arrow-left10"></span>
+		</div>
+		<div class="col-8">
+			100人在线
+		</div>
+		<div class="col-2">
+			
+		</div>
+	</div>
+</header>
+<div class="main chat-bg">
+	<div class="chat">
+		<div class="chat-list">
+			<div class="chat-item" ng-repeat="mes in data">
+				<div class="row" ng-if="mes.user.id === 0">
+					<div class="col-2">
+						<img ng-src="{{mes.user.img}}" alt="" width="40px" height="40px">
+					</div>
+					<div class="col-10">
+						<div class="chat-content">
+							<div class="chat-arrow-other"></div>
+							{{mes.content}}
+						</div>
+					</div>
+				</div>
+				<div class="row" ng-if="mes.user.id !== 0">
+					<div class="col-10 tr">
+						<div class="chat-content">
+							<div class="chat-arrow-me"></div>
+							{{mes.content}}
+						</div>
+					</div>
+					<div class="col-2 tr">
+						<img ng-src="{{mes.user.img}}" alt="" width="40px" height="40px">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="chat-footer row">
+			<form ng-submit="send()" name="chatForm">
+				<div class="col-10">
+					<input type="text" ng-model="content" required>
+				</div>
+				<div class="col-2">
+					<button type="submit" ng-disabled="chatForm.$invalid">发送</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

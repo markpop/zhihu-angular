@@ -5,7 +5,8 @@ angular.module('zhihuAngularApp', [
   'ngResource',
   'ngSanitize',
   'ngTouch',
-  'ngRoute'
+  'ngRoute',
+  'btford.socket-io'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -24,6 +25,14 @@ angular.module('zhihuAngularApp', [
       .when('/comment/:id', {
         templateUrl: 'views/comment.html',
         controller: 'CommentCtrl'
+      })
+      .when('/room', {
+        templateUrl: 'views/room.html',
+        controller: 'RoomCtrl'
+      })
+      .when('/chat/:id', {
+        templateUrl: 'views/chat.html',
+        controller: 'ChatCtrl'
       })
       .otherwise({
         redirectTo: '/'

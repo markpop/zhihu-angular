@@ -11,7 +11,8 @@
     "angular-route": "1.2.6",
     "zepto-full": "~1.1.2",
     "swipe": "~2.0.0",
-    "angular-touch": "~1.2.16"
+    "angular-touch": "~1.2.16",
+    "angular-socket-io": "~0.6.0"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",

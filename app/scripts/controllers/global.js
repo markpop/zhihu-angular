@@ -45,4 +45,10 @@ angular.module('zhihuAngularApp')
         $scope.menuClose();
         $location.path('setting');
     };
+    $scope.menuRoom = function (target) {
+        $('.menu-item').removeClass('active');
+        $(target).addClass('active');
+        $scope.menuClose();
+        $location.path('room');
+    };
   }]);
