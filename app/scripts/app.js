@@ -34,6 +34,10 @@ angular.module('zhihuAngularApp', [
         templateUrl: 'views/chat.html',
         controller: 'ChatCtrl'
       })
+      .when('/user', {
+        templateUrl: 'views/user.html',
+        controller: 'UserCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
